@@ -1,5 +1,11 @@
 data Bintree a = Empty | Node a (Bintree a) (Bintree a)
-    deriving (Show)
+   deriving (Show)
+
+{-
+instance (Show a) => Show (Bintree a) where
+    show Empty = " Empty"
+    show (Node v l r) = " Node " ++ (show v) ++ "\n LEFT:\t" ++ (show l) ++ "\n RIGHT:\t" ++ (show r)
+--}	
 
 int_tree:: Bintree Integer
 int_tree = Node 10 (Node 5 Empty Empty) Empty

@@ -15,6 +15,11 @@ insertList:: (Ord a) => (Bintree a) -> [a] -> (Bintree a)
 insertList t [] = t
 insertList t (x:xs) = insertList (insert t x) xs
 
+
+find:: (Ord a) => (Bintree a) -> a -> Bool
+find Empty _ = False
+find (Node n l r) x = (n == x) || (find l x) || (find r x) 
+
 a1:: Bintree Integer
 a1 = Empty
 

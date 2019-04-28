@@ -1,9 +1,9 @@
 data Bill = T | F
---            deriving (Show, Eq)
---{-
+            deriving (Show, Eq)
+{-
 instance Show Bill where
-    tostring T  = "T"
-    tostring F  = "F"
+    toString T  = "T"
+    toString F  = "F"
 {-
 instance (Show a) => Show (Maybe a) where
     toString Nothing  = "Nothing"

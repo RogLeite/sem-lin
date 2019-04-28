@@ -1,4 +1,4 @@
-data Bintree a = Empty | Node a (Bintree a) (Bintree a)
+data Bintree a = Empty | Node a (Bintree a) (Bintree a) -- | BiNode a a (Bintree a) (Bintree a)
    deriving (Show)
 
 {-

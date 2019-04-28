@@ -11,13 +11,6 @@ at a (x:xs) = at (a-1) xs
 first::[Integer] -> Integer
 first = at 1
 
---OPERATOR--NOT MULTIPLE-------------------------------------
-(/*):: Integer -> Integer -> Bool
-(/*) x a = (x `mod` a) /= 0
-
---OPERATOR--/* OR LARGER---------------------------------------
-(/*|>):: Integer -> Integer -> Bool
-(/*|>) x a = (x > a) || (x /* a)
 
 --PRIMOS----------------------------------------------------
 primos:: [Integer]
@@ -27,5 +20,12 @@ primos = aux 2 inf_int
             where
                 --filtered é a lista infinita com todos os multiplos de primos menores que a filtrados
                 filtered = filter ( /* a ) (filter (> a) list)
-                
+                    where
+                        --OPERATOR--NOT MULTIPLE-------------------------------------
+                        (/*):: Integer -> Integer -> Bool
+                        (/*) x a = (x `mod` a) /= 0
+
+                        --OPERATOR--/* OR LARGER---------------------------------------
+                        (/*|>):: Integer -> Integer -> Bool
+                        (/*|>) x a = (x > a) || (x /* a)
                 

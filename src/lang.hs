@@ -1,3 +1,4 @@
+module Lang where
 
 type Var = String
 

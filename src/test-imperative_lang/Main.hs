@@ -1,4 +1,4 @@
-import Lang
+import Imperative_Lang
 mainMem:: Mem
 mainMem = initMem
 
